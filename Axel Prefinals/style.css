@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --bg: #f7f9fc;
+    --text: #111;
+    --accent: #0077b6;
+    --dark-bg: #1c1c1c;
+    --dark-text: #f1f1f1;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+    scroll-behavior: smooth;
+  }
+  
+  .dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--accent);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a, #toggle-mode {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .mode-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .mode-toggle i {
+    transition: opacity 0.3s ease;
+  }
+  
+  .carousel-section {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .carousel-btn.custom {
+    background-color: #0077b6;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    transition: background 0.3s, transform 0.2s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: white;
+    z-index: 10;
+  }
+  
+  .carousel-btn.custom:hover {
+    background-color: #023e8a;
+    transform: scale(1.1);
+  }
+  
+  .left {
+    left: 15px;
+  }
+  
+  .right {
+    right: 15px;
+  }
+  
+  section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.3);
+  }
+  
+  button[type="submit"] {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #023e8a;
+  }
+  
+
+  #services {
+    background-color: #eef4f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .service-card {
+    background-color: white;
+    padding: 20px;
+    max-width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #0077b6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-card h3 {
+    color: #0077b6;
+    margin-bottom: 10px;
+  }
+  
+ 
+  .dark-mode #services {
+    background-color: #2a2a2a;
+  }
+  
+  .dark-mode .service-card {
+    background-color: #333;
+    color: #f1f1f1;
+    border-left: 5px solid #00b4d8;
+  }
+  
+  .dark-mode .service-card h3 {
+    color: #00b4d8;
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    position: relative;
+    text-align: center;
+  }
+  
+  .signature {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 14px;
+  }
+  
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+  
+  #backToTop:hover {
+    background-color: #023e8a;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
